@@ -4,7 +4,7 @@
 
 // function ozgartir(b){
 //     b=20;
-  
+
 // }
 
 // ozgartir(a)
@@ -228,24 +228,107 @@
 // let result2 = regex.test("salom dunyo") 
 // console.log(result2)
 
-function bankHisobi(dastlapkiHisob){
-    let balans = dastlapkiHisob
-    return {
-        depozit: function(qoshildi){
-            balans+=qoshildi
-            return {
-                yechish:function(yechildi){
-                    balans-=yechildi
-                    return{
-                        balansKorish:function(){
-                            console.log(balans)
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+// function bankHisobi(dastlapkiHisob){
+//     let balans = dastlapkiHisob
+//     return {
+//         depozit: function(qoshildi){
+//             balans+=qoshildi
+//             return {
+//                 yechish:function(yechildi){
+//                     balans-=yechildi
+//                     return{
+//                         balansKorish:function(){
+//                             console.log(balans)
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
 
-let hisob = bankHisobi(1000)
-hisob.depozit(500).yechish(200).balansKorish()
+// let hisob = bankHisobi(1000)
+// hisob.depozit(500).yechish(200).balansKorish()
+
+//2 array
+// let a= 2;
+// let b=3;
+// let arr = [a, b]
+// let n=5;
+// for(let i=2; i<n; i++){
+//     let yangi = 0;
+//     for(let j=0; j<i; j++){
+//         // yangi += arr[j]
+//     }
+//     arr.push(yangi)
+// }
+// console.log(arr);
+
+// console.log(arr.reverse())
+
+//3
+// let arr = [4, 5, 7, 8, 6, 9]
+// let sum =0;
+// let newArr = []
+// for(let i=0; i<arr.length; i++){
+//     if(arr[i]%2!==0){
+//         sum++
+//         newArr.push(arr[i])
+//     }
+// }
+
+// console.log(sum, newArr);
+
+//4
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let newArr = []
+// for(let i=1; i<=arr.length; i+=2){
+//     newArr.push(arr[i])
+// }
+
+// console.log(newArr.reverse());
+
+//5
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let k = 2;
+// let l = 6;
+// let yigindi = 0
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] < k || arr[i] > l) {
+//         yigindi += arr[i]
+//     }
+// }
+// console.log(yigindi)
+
+// function getOddMin(arr){
+//     let newArr = [];
+//     for(let i=0; i<arr.length; i++){
+//         if(i%2===0){
+//             newArr.push(arr[i])
+//         }
+//     }
+//     let minimal = Math.min(...newArr)
+//     console.log(minimal)
+// }
+
+// let ARR = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// getOddMin(ARR)
+// console.log(...ARR)
+
+// let obj = {
+//     ism: "ali",
+//     yosh:20,
+//     familya: "vali"
+// }
+
+// console.log(...Object.values(obj));
+// console.log(...Object.keys(obj));
+// console.log(Object.entries(obj));
+// console.log(JSON.stringify(obj));
+
+let arr = [1, 22, 3, 4, 53, 6, 7, 8, 9, 10];
+
+
+
+
+
