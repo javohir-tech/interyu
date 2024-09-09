@@ -250,85 +250,100 @@
 // let hisob = bankHisobi(1000)
 // hisob.depozit(500).yechish(200).balansKorish()
 
-//2 array
-// let a= 2;
-// let b=3;
-// let arr = [a, b]
-// let n=5;
-// for(let i=2; i<n; i++){
-//     let yangi = 0;
-//     for(let j=0; j<i; j++){
-//         // yangi += arr[j]
-//     }
-//     arr.push(yangi)
-// }
-// console.log(arr);
-
-// console.log(arr.reverse())
-
-//3
-// let arr = [4, 5, 7, 8, 6, 9]
-// let sum =0;
-// let newArr = []
-// for(let i=0; i<arr.length; i++){
-//     if(arr[i]%2!==0){
-//         sum++
-//         newArr.push(arr[i])
+//22 obyekt protatape
+// let animal = {
+//     eats: true,
+//     walk() {
+//         return ("animal walking")
 //     }
 // }
 
-// console.log(sum, newArr);
-
-//4
-// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-// let newArr = []
-// for(let i=1; i<=arr.length; i+=2){
-//     newArr.push(arr[i])
+// let dogs = {
+//     barks: true,
+//     __proto__: animal
 // }
 
-// console.log(newArr.reverse());
+// console.log(dogs)
+// console.log(dogs.eats)
+// console.log(animal.walk())
 
-//5
-// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-// let k = 2;
-// let l = 6;
-// let yigindi = 0
-// for (let i = 0; i < arr.length; i++) {
-//     if (arr[i] < k || arr[i] > l) {
-//         yigindi += arr[i]
+//23 callback
+
+// function Buyurtma(callback) {
+//     console.log("buyurtma qabul qilindi")
+
+//     setTimeout(function(){
+//         callback()
+//     }, 5000)
+// }
+
+// Buyurtma(callback)
+
+// function callback(){
+//     console.log("buyurtma tayyor")
+// }
+
+//24 eerrorla r asosan 7ta 
+//1 syntaxError bu hatolik kodda sintaksis xatolar masalan ( yoki , ni notogri qoyish
+//2 referenseError bu odatda o'zgaruvchilarni yoki funksiyalarni elon qilinmagan bo'lsa ham chaqirish
+//3 typeError bu hatolik noto'g'ri turdagi qiymat bilan amal bajarganda ro'y beradi 
+// let num = 10;
+// num(); // 'num' raqam, funksiya emas
+//4 rangeError bu hatolik oraliqlarni belgilaashda kelip chiqadi masalan bironta massivni indexini belgilashda 
+//let arr = new Array(-1)
+//5 evalError bu hatolik eval funksiyasini noto'g'ri ihslatishdan kelip  chiqadi .hozirgi kunda bu hatolik juda kam chunki hozir eval funksiyai ishlatilinmaydi havfsizlik yuzasidan 
+// Oldingi JavaScript versiyalarida paydo bo'lishi mumkin
+// eval("2 + 2 = 5");
+//6 URIError (URI xatoliklari)
+// Tavsif: decodeURI(), encodeURI() funksiyalaridan noto‘g‘ri foydalanilganda yuzaga keladi. Bu xatoliklar URL kodlash yoki dekodlash jarayonida noto‘g‘ri belgilar qo‘llanganda paydo bo‘ladi.
+// decodeURI('%'); // Noto'g'ri URI komponenti
+// 7 AggregateError (Yig‘ma xatolik)
+
+// Tavsif: Bu xatolik bir nechta xatoliklar bir vaqtning o‘zida sodir bo‘lganda ishlatiladi, masalan, bir nechta va’dalar (Promise) muvaffaqiyatsiz bajarilganda. Bu xatolik ES2021 dan boshlab joriy qilingan.
+// Promise.any([
+//     Promise.reject(new Error("Xatolik 1")),
+//     Promise.reject(new Error("Xatolik 2")),
+//   ]).catch(e => console.log(e)); // AggregateError
+
+// let animal = {
+//     eats:true,
+//     name:"fill",
+//     walk:function(){
+//         return("salom dunyo")
 //     }
 // }
-// console.log(yigindi)
 
-// function getOddMin(arr){
-//     let newArr = [];
-//     for(let i=0; i<arr.length; i++){
-//         if(i%2===0){
-//             newArr.push(arr[i])
-//         }
-//     }
-//     let minimal = Math.min(...newArr)
-//     console.log(minimal)
+// let dogs = {
+//     barks:false, 
+//     __proto__:animal
 // }
 
-// let ARR = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-// getOddMin(ARR)
-// console.log(...ARR)
+// console.log(dogs)
+// console.log(dogs.eats)
+// console.log(dogs.walk())
+// console.log(dogs.name)
 
-// let obj = {
-//     ism: "ali",
-//     yosh:20,
-//     familya: "vali"
+//26 recursion
+
+// function factorial(n){
+//     if(n===0) return  1 //base case
+//     return n*factorial(n-1)// recursion case
 // }
 
-// console.log(...Object.values(obj));
-// console.log(...Object.keys(obj));
-// console.log(Object.entries(obj));
-// console.log(JSON.stringify(obj));
+// factorial(5)
+// console.log(factorial(5))
 
-let arr = [1, 22, 3, 4, 53, 6, 7, 8, 9, 10];
+function person(name, age){
+    this.name = name;
+    this.age = age;
+    this.greet = function(){
+        return  `salom memi ismim ${name} va men ${age} yoshdaman`
+    }
+}
 
 
-
-
+const person1 = new person("ali", 20)
+const person2 = new person("vali", 30)
+console.log(person1.greet())
+console.log(person2.greet())
 
