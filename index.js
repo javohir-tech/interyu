@@ -333,17 +333,94 @@
 // factorial(5)
 // console.log(factorial(5))
 
-function person(name, age){
-    this.name = name;
-    this.age = age;
-    this.greet = function(){
-        return  `salom memi ismim ${name} va men ${age} yoshdaman`
+// function construktor(name, age){
+//     this.name = name, 
+//     this.age = age,
+//     this.method = function(){
+//         return(`salom men ${name} man va men ${age} yoshdaman`)
+//     }
+// }
+
+// const person = new construktor("ali", 20)
+// console.log(person.method())
+
+// //n!
+
+// function factorial(n){
+//     if(n===0) return n=1 // base case
+
+//     return n*factorial(n-1)
+// }
+
+// console.log(factorial(5))
+
+// //29
+
+// const text = "salom"
+
+// const char  = text.charAt(2)
+// console.log(char)
+// const char2 = text[3]
+// console.log(char2)
+
+//14
+
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8]
+// let max = 0
+// let newArr = []
+
+// for(let i=1; i<arr.length; i+=2){
+//     newArr.push(arr[i])
+// }
+
+// max=  Math.max(...newArr)
+// console.log(max)
+
+//15
+// let arr = [11, 22, 43, 543, 34, 45]
+// let index = -1
+
+// if (arr.length > 3) {
+//     for (let i = 1; i < arr.length - 1; i++) {
+//         if(arr[i-1]<arr[i] && arr[i+1]<arr[i]){
+//             index = i
+//             console.log(`lokal maximum : ${arr[i]} indexi: ${index}`)
+//         }
+//     }
+// }
+// if(index === -1){
+//     console.log("local maximum topilmadi ")
+// }
+
+//16
+// let arr = [111, 22, 43, 543, 34, 45]
+// let r = 10;
+// let boshlangich = arr[0]
+// let boshlangichAyirma = arr[0]-r;
+
+// for(let i=1; i<arr.length; i++){
+//     let ayirma = arr[i]-r
+//     if(ayirma<boshlangichAyirma){
+//         boshlangichAyirma=ayirma
+//         boshlangich=arr[i]
+//     }
+// }
+
+// console.log(boshlangich)
+
+//17
+let arr = [111, 22, 43, 543, 34, 45]
+let yigindi = arr[0]+arr[1] 
+let maxIndexs = []
+
+for(let i=1; i<arr.length-1; i++){
+    let yangiYigindi = arr[i]+arr[i+1]
+    if(yangiYigindi>yigindi){
+        yigindi = yangiYigindi
+        maxIndexs.push(arr[i], arr[i+1])
     }
 }
 
+console.log(yigindi, maxIndexs)
 
-const person1 = new person("ali", 20)
-const person2 = new person("vali", 30)
-console.log(person1.greet())
-console.log(person2.greet())
 
