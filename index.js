@@ -409,18 +409,82 @@
 // console.log(boshlangich)
 
 //17
-let arr = [111, 22, 43, 543, 34, 45]
-let yigindi = arr[0]+arr[1] 
-let maxIndexs = []
+// let arr = [111, 22, 43, 543, 34, 45]
+// let yigindi = arr[0]+arr[1] 
+// let maxIndexs = []
 
-for(let i=1; i<arr.length-1; i++){
-    let yangiYigindi = arr[i]+arr[i+1]
-    if(yangiYigindi>yigindi){
-        yigindi = yangiYigindi
-        maxIndexs.push(arr[i], arr[i+1])
-    }
-}
+// for(let i=1; i<arr.length-1; i++){
+//     let yangiYigindi = arr[i]+arr[i+1]
+//     if(yangiYigindi>yigindi){
+//         yigindi = yangiYigindi
+//         maxIndexs.push(arr[i], arr[i+1])
+//     }
+// }
 
-console.log(yigindi, maxIndexs)
+// console.log(yigindi, maxIndexs)
+
+//18 
+// let arr = [1, 2, 4, 6, 9, 5, 7, 8, 9]
+// let index1 = -1;
+// let index2 = -1;
+
+// for (let i = 0; i < arr.length-1; i++) {
+//     for(let j=i+1; j<arr.length; j++){
+//         if(arr[i]===arr[j]){
+//            index1 = i;
+//            index2 = j;
+//            break
+//         }
+//     }
+// }
+
+// console.log(index1, index2);
+
+//19
+// let arr = [1, 3, 3, 5, 3, 6, 6, 8, 4, 5, 6, 7, 6, 6]
+// let engKopElement = null;
+// let engKopTakrorlanish = 0
+// let sanashObj = {}
+// for(let i=0; i<arr.length; i++){
+//     let element = arr[i]
+
+//     if(sanashObj[element]){
+//         sanashObj[element]++
+//     }else{
+//         sanashObj[element] = 1
+//     }
+
+//     if(engKopTakrorlanish<sanashObj[element]){
+//         engKopTakrorlanish = sanashObj[element]
+//         engKopElement = element
+//     }
+// }
+
+// console.log(engKopTakrorlanish, engKopElement)
+
+//20
+
+// let arr = [1, 3, 5, 2, 5, 6, 8, 12, 34, 53];
+// let newArr = [];
+
+// for(let i=0; i<arr.length; i++){
+//     if(arr[i]%2===0){
+//         newArr.push(arr[i])
+//     }
+// }
+
+// console.log(newArr, newArr.length)
+
+//21
+
+// let arr = [1, 3, 5, 2, 5, 6, 8, 12, 34, 53];
+// let k=2;
+
+// for(let i=0; i<arr.length; i++){
+//     arr[i]=arr[i]*k
+// }
+
+// console.log(arr)
+
 
 
