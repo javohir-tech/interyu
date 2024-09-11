@@ -363,128 +363,58 @@
 // const char2 = text[3]
 // console.log(char2)
 
-//14
+//32  aarow function
+//arrow funksiyasida this kalit so'zi tashqi konteksdan olingan merosga ishora qiladi qolgan funksiyalarda esa ichki konteksga ishora qiladi
+// bu degani arrow funksiyasida this kalit so'zi bilan consolega natijani chiqarmoqchi bo'lsak yoki undefint yoki tashqi konteksdan kelgan malumot chiqadi 
 
-// let arr = [1, 2, 3, 4, 5, 6, 7, 8]
-// let max = 0
-// let newArr = []
-
-// for(let i=1; i<arr.length; i+=2){
-//     newArr.push(arr[i])
+// const myfunction = (a, b) => {
+//     return a + b
 // }
 
-// max=  Math.max(...newArr)
-// console.log(max)
+// console.log(myfunction(2, 5))
 
-//15
-// let arr = [11, 22, 43, 543, 34, 45]
-// let index = -1
+// const yangiFunction = (a, b) => a + b;
 
-// if (arr.length > 3) {
-//     for (let i = 1; i < arr.length - 1; i++) {
-//         if(arr[i-1]<arr[i] && arr[i+1]<arr[i]){
-//             index = i
-//             console.log(`lokal maximum : ${arr[i]} indexi: ${index}`)
-//         }
-//     }
-// }
-// if(index === -1){
-//     console.log("local maximum topilmadi ")
-// }
+// console.log(yangiFunction(2, 4))
 
-//16
-// let arr = [111, 22, 43, 543, 34, 45]
-// let r = 10;
-// let boshlangich = arr[0]
-// let boshlangichAyirma = arr[0]-r;
+//arrow example
+// this.name = "Tashqi konteks"
 
-// for(let i=1; i<arr.length; i++){
-//     let ayirma = arr[i]-r
-//     if(ayirma<boshlangichAyirma){
-//         boshlangichAyirma=ayirma
-//         boshlangich=arr[i]
+// const person = {
+//     name: "Ali",
+//     boshqaFunksiyalar: function () {
+//         console.log(this.name)
+//     },
+//     arrowFunksiyasi: () => {
+//         console.log(this.name)
 //     }
 // }
 
-// console.log(boshlangich)
+// person.boshqaFunksiyalar()
+// person.arrowFunksiyasi()
 
-//17
-// let arr = [111, 22, 43, 543, 34, 45]
-// let yigindi = arr[0]+arr[1] 
-// let maxIndexs = []
-
-// for(let i=1; i<arr.length-1; i++){
-//     let yangiYigindi = arr[i]+arr[i+1]
-//     if(yangiYigindi>yigindi){
-//         yigindi = yangiYigindi
-//         maxIndexs.push(arr[i], arr[i+1])
+//33
+// const newCar = {
+//     init(make, model){
+//         this.make = make;
+//         this.model = model
+//     },
+//     getData(){
+//         return `${this.make} ${this.model}`
 //     }
 // }
 
-// console.log(yigindi, maxIndexs)
+// const myCar = Object.create(newCar)
+// myCar.init("Gm", "Nexia2")
+// console.log(myCar.getData())
 
-//18 
-// let arr = [1, 2, 4, 6, 9, 5, 7, 8, 9]
-// let index1 = -1;
-// let index2 = -1;
-
-// for (let i = 0; i < arr.length-1; i++) {
-//     for(let j=i+1; j<arr.length; j++){
-//         if(arr[i]===arr[j]){
-//            index1 = i;
-//            index2 = j;
-//            break
-//         }
-//     }
+//new kalit so'zi bilan yangi object yaratish
+// function construktorFunction(make, model){
+//     this.make = make;
+//     this.model = model;
+//     return `${make}${make}`
 // }
 
-// console.log(index1, index2);
-
-//19
-// let arr = [1, 3, 3, 5, 3, 6, 6, 8, 4, 5, 6, 7, 6, 6]
-// let engKopElement = null;
-// let engKopTakrorlanish = 0
-// let sanashObj = {}
-// for(let i=0; i<arr.length; i++){
-//     let element = arr[i]
-
-//     if(sanashObj[element]){
-//         sanashObj[element]++
-//     }else{
-//         sanashObj[element] = 1
-//     }
-
-//     if(engKopTakrorlanish<sanashObj[element]){
-//         engKopTakrorlanish = sanashObj[element]
-//         engKopElement = element
-//     }
-// }
-
-// console.log(engKopTakrorlanish, engKopElement)
-
-//20
-
-// let arr = [1, 3, 5, 2, 5, 6, 8, 12, 34, 53];
-// let newArr = [];
-
-// for(let i=0; i<arr.length; i++){
-//     if(arr[i]%2===0){
-//         newArr.push(arr[i])
-//     }
-// }
-
-// console.log(newArr, newArr.length)
-
-//21
-
-// let arr = [1, 3, 5, 2, 5, 6, 8, 12, 34, 53];
-// let k=2;
-
-// for(let i=0; i<arr.length; i++){
-//     arr[i]=arr[i]*k
-// }
-
-// console.log(arr)
-
+// const yangi  = new construktorFunction("GM", "Nexia3")
 
 
