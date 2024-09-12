@@ -418,3 +418,96 @@
 // const yangi  = new construktorFunction("GM", "Nexia3")
 
 
+// function yaratuvchiFunksiya(qoshiladiganQiymat){
+//     return function(son){
+//         return son + qoshiladiganQiymat
+//     }
+// }
+
+// const qosh10 = yaratuvchiFunksiya(10)
+
+// console.log(qosh10(5));
+
+// function NewFunction(name, age){
+//     this.name = name;
+//     this.age = age;
+//     this.method = function(){
+//         return `${this.name}${age}`
+//     }
+// }
+
+// const newObj = new NewFunction("ali", "20")
+// console.log(newObj)
+// console.log(newObj.method())
+
+// function ulanadiganFunksiya( familya){
+//     console.log(`salom meni ismim ${this.name} ${familya}  va men ${this.age} yoshdaman`)
+// }
+
+// const obj = {
+//     name: "Javohir",
+//     age:21
+// }
+
+// const tayyorMalumot = ulanadiganFunksiya.bind(obj)
+// tayyorMalumot("Suvonov")
+
+// const regex = /(\d{2})-(\d{2})-(\d{4})/
+// const str = "12-02-2024"
+// const result = regex.exec(str)
+// console.log(result)
+
+// function curreyingFunction(a,  b){
+//     return function(b){
+//         return a+b
+//         }
+//     }
+
+
+// const funcksiya1 = curreyingFunction(2)
+// console.log(funcksiya1)
+// const funcksiya2 = funcksiya1(3)
+// console.log(funcksiya2)
+
+function restoran(keladiganFunksiya){
+    console.log("buyurtma qabul qilindi")
+
+    setTimeout(function(){
+        keladiganFunksiya()
+    }, 5000)
+}
+
+function keladiganFunksiya(){
+    console.log('buyurtma tayyor') 
+}
+
+
+restoran(keladiganFunksiya)
+
+//n!
+
+function Factorial(n){
+    if(n===0) return n=1// base case
+
+    return n*Factorial(n-1)
+}
+
+console.log(Factorial(5))
+
+this.name = "Ali"
+
+const obj = {
+    name:"Javohir",
+    olish: ()=>{
+        return(this.name)
+    }
+}
+
+console.log(obj.olish())
+
+
+
+
+
+
+
