@@ -469,45 +469,97 @@
 // const funcksiya2 = funcksiya1(3)
 // console.log(funcksiya2)
 
-function restoran(keladiganFunksiya){
-    console.log("buyurtma qabul qilindi")
+// function restoran(keladiganFunksiya){
+//     console.log("buyurtma qabul qilindi")
 
-    setTimeout(function(){
-        keladiganFunksiya()
-    }, 5000)
-}
+//     setTimeout(function(){
+//         keladiganFunksiya()
+//     }, 5000)
+// }
 
-function keladiganFunksiya(){
-    console.log('buyurtma tayyor') 
-}
-
-
-restoran(keladiganFunksiya)
-
-//n!
-
-function Factorial(n){
-    if(n===0) return n=1// base case
-
-    return n*Factorial(n-1)
-}
-
-console.log(Factorial(5))
-
-this.name = "Ali"
-
-const obj = {
-    name:"Javohir",
-    olish: ()=>{
-        return(this.name)
-    }
-}
-
-console.log(obj.olish())
+// function keladiganFunksiya(){
+//     console.log('buyurtma tayyor') 
+// }
 
 
+// restoran(keladiganFunksiya)
+
+// //n!
+
+// function Factorial(n){
+//     if(n===0) return n=1// base case
+
+//     return n*Factorial(n-1)
+// }
+
+// console.log(Factorial(5))
+
+// this.name = "Ali"
+
+// const obj = {
+//     name:"Javohir",
+//     olish: ()=>{
+//         return(this.name)
+//     }
+// }
+
+// console.log(obj.olish())
+
+//33
+//protatype design patern     protatip dizayn andozasi 
+
+// const obj = {
+//     model:"Audi",
+//     color:"qizil"
+// }
+
+// const yangiObj = Object.create(obj)
+// yangiObj.model = "BMW"
+// yangiObj.color = "oq" 
+// console.log(yangiObj)
 
 
+// const carProtatype = {
+//     drive(){
+//         console.log(`${this.model} moshinasi haydayapti`);
+//     },
+//     getColor(){
+//         return `${this.model} moshinasi ${this.color} rangda`
+//     }
+// }
 
+// const car1 = Object.create(carProtatype, {
+//     model: {value:"BMW", writable:true},
+//     color:{value:"oq"}
+// })
 
+// car1.drive()
+// console.log(car1.getColor())
 
+// function myFunction(familya){
+//     return `Salaom men ${familya} ${this.name} va men ${this.age} yoshdaman`
+// }
+
+// const  obj = {
+//     name:"ali",
+//     age:20,
+// }
+
+// const callWork = myFunction.call(obj, "Suvonov")
+// console.log(callWork)
+//34
+// (...rest) operatori
+// function  sum(...numbers){
+//     return numbers
+// }
+
+// console.log(sum(1, 2, 3, 4))
+// //(...spread) operatori
+// const arr = ["olma", "nok"]
+// console.log(...arr)
+// const newArr = [...arr, "uzum", "O'rik"]
+// console.log(newArr) 
+
+//reduse
+const arr = [1, 2, 3, 4, 5]
+console.log(arr.reduce((saqlaydi, joriy)=>saqlaydi+joriy, 0))
