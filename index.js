@@ -561,5 +561,92 @@
 // console.log(newArr) 
 
 //reduse
-const arr = [1, 2, 3, 4, 5]
-console.log(arr.reduce((saqlaydi, joriy)=>saqlaydi+joriy, 0))
+// const arr = [1, 2, 3, 4, 5]
+// console.log(arr.reduce((saqlaydi, joriy)=>saqlaydi+joriy, 0))
+
+// 36 object yaratish turlari 
+//1 chisi qolda kiritish
+
+// 2 new kalit so'zi bilan
+// const obj = new Object()
+// obj.name = "Asil"
+// console.log(obj)
+
+// 3 Object.create() bilan
+// const proto = {
+//     greet: function(){
+//         console.log("salom")
+//     }
+// }
+
+// const obj2 = Object.create(proto)
+// obj2.age = 20
+// console.log(obj2)
+
+// // 4 assign
+// const obj3 = Object.assign( obj, obj2)
+// console.log(obj3)
+
+// spreed operatori bilan
+// const obj4 = {...obj, ...obj2, obj3}
+// console.log(obj4)
+
+//fromEntries
+// const entries = [['name', 'Ali'], ['age', 20]]
+// const obj5 = Object.fromEntries(entries)
+// console.log(obj5)
+
+//Map() dan foydalanip
+
+// const map = new Map()
+// map.set('name', 'Vali')
+// map.set('age', 21)
+// let obj6 = Object.fromEntries(map)
+// console.log(obj6)
+
+//37 Promise  
+
+// const promise = new Promise((resolve, reject)=>{
+//     setTimeout(()=>{
+//         // resolve('bajarildi')
+//         reject("yemadi")
+//     }, 2000)
+// })
+
+// promise
+//     .then((result)=>{
+//         console.log(result)
+//     })
+//     .catch((error)=>{
+//         console.log(error)
+//     })
+
+//38
+//class kalit sozi  bilan obyekt yartish 
+// class Person{
+//     constructor(name, age){
+//         this.name = name,
+//         this.age = age
+//     }
+//     greet(){
+//         return `${this.name}${this.age}`
+//     }
+// }
+
+// const obj = new Person("Ali", 20)
+// console.log(obj);
+
+function myFunction(familya){
+    return `salom men ${this.name} ${familya} va men ${this.age} yoshdaman`
+}
+
+const obj = {
+    name:"Javohir", 
+    age:20
+}
+
+const yangiObject = myFunction.call(obj, "Suvonov")
+console.log(yangiObject)
+
+
+
