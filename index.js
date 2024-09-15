@@ -685,7 +685,7 @@
 //weakset axlat qutisi
 // let weakset = new WeakSet();
 
-// const obj = {
+// let obj = {
 //     name:"Ali",
 //     age:20
 // }
@@ -701,6 +701,38 @@
 // console.log(weakset.has(obj));
 
 // obj = null;
+// console.log(weakset.has(obj))
+
+//42
+// function malumotKorsat(callback){
+//     console.log("malumotlar yuklanyapti")
+
+//     setTimeout(()=>{
+//         console.log('malumot yuklandi')
+//         return callback()
+//     }, 2000)
+// }
+// function callback(){
+//     console.log("Malumot yuklandan keyin bu funksiya ishlaydi ")
+// }
+
+// malumotKorsat(callback)
+
+//43 weakMap()
+
+// const weapmap = new WeakMap()
+
+// let obj = {
+//     name:"asil"
+// }
+
+// weapmap.set(obj, "talaba")
+
+// console.log(weapmap.get(obj))
+
+// obj = null
+
+// console.log(weapmap.get(obj))
 
 
 
