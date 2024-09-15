@@ -636,17 +636,74 @@
 // const obj = new Person("Ali", 20)
 // console.log(obj);
 
-function myFunction(familya){
-    return `salom men ${this.name} ${familya} va men ${this.age} yoshdaman`
-}
+// function myFunction(familya){
+//     return `salom men ${this.name} ${familya} va men ${this.age} yoshdaman`
+// }
 
-const obj = {
-    name:"Javohir", 
-    age:20
-}
+// const obj = {
+//     name:"Javohir", 
+//     age:20
+// }
 
-const yangiObject = myFunction.call(obj, "Suvonov")
-console.log(yangiObject)
+// const yangiObject = myFunction.call(obj, "Suvonov")
+// console.log(yangiObject)
+
+//39 
+
+// function* raqamliGenerator(){
+//     yield function myFunction(){
+//         return `salom Dunyo`
+//     }
+//     yield 2
+//     yield 3
+// }
+
+// const generator = raqamliGenerator()
+
+// console.log(generator.next().value());
+// console.log(generator.next().value);
+// console.log(generator.next().value);
+
+//takrorlash 
+//promise
+// const promise = new Promise((resolve, reject)=>{
+//     setTimeout(()=>{
+//         // resolve('Bajarildi')
+//         reject("bajarilmadi")
+//     }, 3000)
+// })
+
+// promise 
+//     .then((response)=>{
+//         console.log(response)
+//     })
+//     .catch((error)=>{
+//         console.log(error)
+//     })
+
+//40 
+//weakset axlat qutisi
+// let weakset = new WeakSet();
+
+// const obj = {
+//     name:"Ali",
+//     age:20
+// }
+
+// const obj1 = {
+//     name:"Vali",
+//     age:21
+// }
+
+// weakset.add(obj)
+// weakset.add(obj1)
+
+// console.log(weakset.has(obj));
+
+// obj = null;
+
+
+
 
 
 
