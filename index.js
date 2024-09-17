@@ -734,6 +734,128 @@
 
 // console.log(weapmap.get(obj))
 
+//43 obyekt destrakting
+// const person = {
+//     name:"ali",
+//     age:20,
+//    manzil:{
+//     shahar:"Toshkent",
+//     id:"54-53-8"
+//    }
+// }
+
+// const {name:  ismi, age:yoshi, manzil : {shahar, id}} = person
+
+// console.log(ismi);
+// console.log(yoshi)
+// // console.log(manzil)
+// console.log(shahar)
+
+//44 prtotatik meros olish va classsik meros  olish
+// protatik meros olish
+// const hayvon  = {
+//     turi:"manimal",
+//     method:function(){
+//         console.log("ovqatlanayapti...")
+//     }
+// }
+
+// const it  = Object.create(hayvon)
+
+// it.turi = "It"
+// console.log(it.turi)
+// it.method()
+
+//classik meros olish
+// class Hayvon{
+//     constructor(nomi){
+//         this.name = nomi
+//     }
+
+//     oziqlanish(){
+//         console.log(`${this.name} oziqlanayapti`)
+//     }
+// }
+
+// class It extends Hayvon{
+//     ovozChiqarish(){
+//         console.log(`${this.name} ovoz chiqarayapti `)
+//     }
+// }
+
+// const Itvacha = new It("rex")
+// console.log(Itvacha)
+// Itvacha.oziqlanish()
+
+//weakset  vaa weakmap
+// //weakset true yoki faalse qaytaradi 
+// const weakset = new  WeakSet()
+// const obj = {name:"Ali"}
+// weakset.add(obj)
+// console.log(weakset.has(obj))
+// //weakmap obyektga berilgan qiymatni qaatradi 
+// const weakmap = new WeakMap()
+// const obj1 = {age:20}
+// weakmap.set(obj1, "obj1  uchun qiymat")
+// console.log(weakmap.get(obj1))
+
+//obyekt dizayn patern 
+// const car = {
+//     name: "BMW",
+//     color:"red", 
+//     getInfo: function(){
+//         console.log(`${this.name} rangi ${this.color}`)
+//     }
+// }
+
+// const car1 = Object.create(car)
+// car1.name = "Mers"
+// car1.color = "ko'k"
+// car1.getInfo()
+// console.log(car1)
+
+// const carMOdul = (function(){
+//     let speed = 0;
+
+//     return{
+//         qoshish: function(){
+//             speed+=10
+//         },
+//         getSpeed:function(){
+//             return speed
+//         }
+//     }
+// })()
+
+// carMOdul.qoshish()
+// console.log(carMOdul.getSpeed())//10
+
+const singlePateren = (function(){
+    let instance // = "qiymati bor"
+
+    function craeteInstance(){
+        return new Object('Yagona obyekt')
+    }
+
+    return {
+        getInstance:function(){
+            if(!instance){
+                instance = craeteInstance()
+            }
+            return instance
+        }
+    }
+})()
+
+// console.log(singlePateren);
+const instance1 = singlePateren.getInstance()
+console.log(instance1)
+const instance2 = singlePateren.getInstance()
+console.log(instance2)
+console.log(instance1 === instance2)
+
+
+
 
 
 
