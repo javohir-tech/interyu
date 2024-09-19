@@ -830,34 +830,136 @@
 // carMOdul.qoshish()
 // console.log(carMOdul.getSpeed())//10
 
-const singlePateren = (function(){
-    let instance // = "qiymati bor"
+// const singlePateren = (function(){
+//     let instance // = "qiymati bor"
 
-    function craeteInstance(){
-        return new Object('Yagona obyekt')
+//     function craeteInstance(){
+//         return new Object('Yagona obyekt')
+//     }
+
+//     return {
+//         getInstance:function(){
+//             if(!instance){
+//                 instance = craeteInstance()
+//             }
+//             return instance
+//         }
+//     }
+// })()
+
+// // console.log(singlePateren);
+// const instance1 = singlePateren.getInstance()
+// console.log(instance1)
+// const instance2 = singlePateren.getInstance()
+// console.log(instance2)
+// console.log(instance1 === instance2)
+
+// const promise = new Promise((resolve, reject)=>{
+//    setTimeout(function(){
+//     resolve(`o'xshadi `)
+//     reject(`Bajarilmadi`)
+//    }, 3000)
+// })
+
+
+// promise
+//     .then((response)=>{
+//         console.log(response)
+//     })
+//     .catch((error)=>{
+//         console.log(error)
+//     })
+
+// let x= 20
+
+// function myFunction(a){
+//     a= 10;
+//     return a
+// }
+// console.log(x)
+// console.log(myFunction(x))
+
+// function OBjectFunction(obj){
+//     obj.name = "vali"
+// }
+
+// let obj2 = {
+//     name:"ali"
+// }
+
+// OBjectFunction(obj2)
+// console.log(obj2.name)
+
+// async await 
+
+// async  function malumotOlish(){
+//     try{
+//         let response = await fetch(`https://jsonplaceholder.typicode.com/posts/1`)
+
+//         if(!response.ok){
+//             throw new Error('xatolik yuz berdi ', response.status)
+//         }
+
+//         let data = await response.json()
+//         console.log('olingan malumot', data)
+//     }
+//     catch(xato){
+//         console.log(`xatolik boldi ${xato.message}`)
+//     }
+//     finally{
+//         console.log(`malumot olish yakunlandi `)
+//     }
+// }
+
+// malumotOlish()
+
+// async function ikkitaFetchdanMalumotOlish(){
+//     try {
+//         const [resonse1, resonse2] = await Promise.all([
+//             fetch(`https://jsonplaceholder.typicode.com/posts/1`), 
+//             fetch(`https://jsonplaceholder.typicode.com/posts/2`)
+//         ]);
+
+//         if(!resonse1.ok || !resonse2.ok){
+//             throw new Error(`hatolik yuz berdi `)
+//         }
+//         let data1 =await resonse1.json()
+//         let data2 =await resonse2.json()
+//         console.log(`1 chi malumot:`, data1)
+//         console.log(`2 chi malumot`, data2)
+//     }catch(xato){
+//         console.log(`xatolik bo'ldi  ${xato.message}`)
+//     }
+    
+// }
+
+// ikkitaFetchdanMalumotOlish()
+
+// function tashqiFunksiya(){
+//     let hello = "Hello World"
+
+//     return function ichkiFunksiya(){
+//         console.log(hello)
+//     }
+
+//     // ichkiFunksiya()
+// }
+
+// let funksiya = tashqiFunksiya()
+// funksiya()
+
+var scope = 'Globaal Scope'
+
+function check(){
+    var scope = "local Scope"
+    function f(){
+        return scope
     }
+    return f
+}
 
-    return {
-        getInstance:function(){
-            if(!instance){
-                instance = craeteInstance()
-            }
-            return instance
-        }
-    }
-})()
-
-// console.log(singlePateren);
-const instance1 = singlePateren.getInstance()
-console.log(instance1)
-const instance2 = singlePateren.getInstance()
-console.log(instance2)
-console.log(instance1 === instance2)
-
-
-
-
-
+const yangi = check()
+console.log(yangi())
 
 
 
